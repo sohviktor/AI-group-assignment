@@ -134,4 +134,5 @@ print("4__________________________________")
 # Fehérje-kalória arány kiszámítása minden termékre
 # Magasabb érték = több fehérje kevesebb kalóriával
 df['protein_per_calorie'] = df['protein'] / df['calories']
-
+# Átlagos fehérje-kalória arány éttermenként
+protein_efficiency = df.groupby('restaurant')['protein_per_calorie'].mean()

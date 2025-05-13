@@ -85,3 +85,20 @@ print(f"Termékszám szórása: {std_products:.2f}")
 print(f"Minimum termékszám: {min_products} ({products_per_restaurant.idxmin()})")
 print(f"Maximum termékszám: {max_products} ({products_per_restaurant.idxmax()})")
 print(f"Termékszám tartománya: {range_products}")
+
+# A termékek eloszlásának vizualizálása
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 6))
+products_per_restaurant.sort_values().plot(kind='bar')
+plt.title('Termékek száma éttermenként')
+plt.xlabel('Étterem')
+plt.ylabel('Termékek száma')
+plt.tight_layout()
+plt.savefig('termekek_szama_ettermenként.png')
+plt.close()
+
+# Részletes lista az éttermekről és termékszámokról
+print("\nÉttermenként található termékek száma:")
+for restaurant, count in products_per_restaurant.sort_values(ascending=False).items():
+    print(f"{restaurant}: {count} termék")

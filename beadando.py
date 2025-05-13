@@ -139,7 +139,7 @@ protein_efficiency = df.groupby('restaurant')['protein_per_calorie'].mean()
 
 # Rendezzük csökkenő sorrendbe
 protein_efficiency_sorted = protein_efficiency.sort_values(ascending=False)
-print("\nÉttermek fehéerje-kalória aránya (fehérje/kalória):")
+print("\nÉttermek fehérje-kalória aránya (fehérje/kalória):")
 for restaurant, ratio in protein_efficiency_sorted.items():
     print(f"{restaurant}: {ratio:.4f}")
 

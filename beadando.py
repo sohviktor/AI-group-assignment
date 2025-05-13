@@ -76,4 +76,4 @@ std_products = products_per_restaurant.std()
 min_products = products_per_restaurant.min()
 max_products = products_per_restaurant.max()
 # Tartomány (range)
-range_products = max_products - min_products;
+range_products = max_products - min_products

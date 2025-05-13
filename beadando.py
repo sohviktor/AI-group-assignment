@@ -184,3 +184,12 @@ model.fit(X_train, y_train)
 
 # Előrejelzés a teszt adatokon
 y_pred = model.predict(X_test)
+
+# Modell teljesítményének értékelése
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+r2 = model.score(X_test, y_test)
+
+print("\nLineáris regressziós modell teljesítménye:")
+print(f"RMSE (Root Mean Squared Error): {rmse:.2f} kalória")
+print(f"R² (Determinációs együttható): {r2:.4f}")

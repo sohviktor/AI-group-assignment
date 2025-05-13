@@ -133,5 +133,5 @@ print("4__________________________________")
 
 # Fehérje-kalória arány kiszámítása minden termékre
 # Magasabb érték = több fehérje kevesebb kalóriával
-df['protein_per_calories'] = df['protein'] / df['calories']
+df['protein_per_calorie'] = df['protein'] / df['calories']
 

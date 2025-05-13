@@ -147,3 +147,15 @@ for restaurant, ratio in protein_efficiency_sorted.items():
 best_restaurant = protein_efficiency_sorted.index[0]
 best_ratio = protein_efficiency_sorted.iloc[0]
 print(f"\nLegjobb fehérje-kalória arányú étterem: {best_restaurant} ({best_ratio:.4f})")
+
+# Eredmény ábrázolása
+plt.figure(figsize=(12, 6))
+protein_efficiency_sorted.plot(kind='bar', color='green')
+plt.title('Éttermek fehérje-kalória aránya')
+plt.xlabel('Étterem')
+plt.ylabel('Fehérje/kalória arány')
+plt.axhline(y=protein_efficiency.mean(), color='red', linestyle='--', label='Átlag')
+plt.legend(['Átlagos fehérje-kalória arány'])
+plt.tight_layout()
+plt.savefig('feherje_kaloria_arany.png')
+plt.close()

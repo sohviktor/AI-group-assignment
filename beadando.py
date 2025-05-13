@@ -60,3 +60,8 @@ print("1__________________________________")
 # Az étteremláncok neveinek egyedi értékeinek száma
 unique_chains = df['restaurant'].nunique()
 print(f'Hányféle étteremlánc adatai találhatóak meg az adathalmazban? {unique_chains}')
+
+# 2. Éttermenként átlagosan hány termék található az adathalmazban? Mi ennek a mediánja, szórása, mik a szélsőértékei? (milyen tartományban mozog...)
+print("2__________________________________")
+# Számoljuk meg éttermenként a termékek számát
+products_per_restaurant = df.groupby('restaurant').size()

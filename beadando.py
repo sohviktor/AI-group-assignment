@@ -108,3 +108,11 @@ print("3__________________________________")
 # A só és cukor mennyiségének összegzése étteremlánc szerint
 sodium_per_restaurant = df.groupby('restaurant')['sodium'].sum()
 sugar_per_restaurant = df.groupby('restaurant')['sugar'].sum()
+# Legtöbb sót használó étterem
+max_sodium_restaurant = sodium_per_restaurant.idxmax()
+max_sodium_value = sodium_per_restaurant.max()
+# Legtöbb cukrot használó étterem
+max_sugar_restaurant = sugar_per_restaurant.idxmax()
+max_sugar_value = sugar_per_restaurant.max()
+print(f'\nLegtöbb sót használó étterem: {max_sodium_restaurant} ({max_sodium_value} mg)')
+print(f'Legtöbb cukrot használó étterem: {max_sugar_restaurant} ({max_sugar_value} g)')

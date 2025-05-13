@@ -102,3 +102,6 @@ plt.close()
 print("\nÉttermenként található termékek száma:")
 for restaurant, count in products_per_restaurant.sort_values(ascending=False).items():
     print(f"{restaurant}: {count} termék")
+
+# 3. Melyik étteremben használják a legtöbb sót, legtöbb cukrot?
+print("3__________________________________")

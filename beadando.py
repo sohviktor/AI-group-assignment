@@ -166,3 +166,14 @@ print("\nLegjobb fehérje-kalória arányú termékek:")
 for idx, row in top_items.iterrows():
     print(f"{row['restaurant']} - {row['item']}: {row['protein_per_calorie']:.4f} (Fehérje: {row['protein']}g, Kalória: {row['calories']})")
 #---
+
+# 5. Előrejelezhető a különböző adatok (zsír, cukor, só, rostok, fehérje, szénhidrátok...) segítségével a kalóriatartalom?
+print("5__________________________________")
+
+# Kiválasztjuk a prediktorokat (magyarázó változókat) és a célt (kalória)
+
+# Mivel salad-ból mindegyik "Other" ezért nem használjuk fel
+predictors = ['total_fat', 'sat_fat', 'trans_fat', 'cholesterol', 'sodium', 
+              'total_carb', 'fiber', 'sugar', 'protein', 'vit_a', 'vit_c', 'calcium']
+X = df[predictors]
+y = df['calories']

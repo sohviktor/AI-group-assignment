@@ -226,3 +226,21 @@ plt.ylabel('Együtthatók abszolút értéke')
 plt.tight_layout()
 plt.savefig('prediktor_fontossag.png')
 plt.close()
+
+# A kapott eredmények értelmezése:
+# 
+# A lineáris regressziós modell kiváló teljesítményt mutat a kalóriatartalom előrejelzésében:
+# - RMSE = 21.42 kalória: A modell átlagosan csak ~21 kalóriát téved, ami nagyon pontos
+# - R² = 0.9924: A modell a kalóriatartalom varianciájának 99.24%-át magyarázza meg
+# 
+# A legfontosabb prediktorok (együtthatók szerint):
+# 1. Transzzsír (12.16): Legerősebb hatás, 1g transzzsír ~12 kalóriát jelent
+# 2. Összes zsír (7.09): Jelentős pozitív hatás
+# 3. Összes szénhidrát (3.92): Közepes pozitív hatás
+# 4. Fehérje (3.87): Hasonló mértékű befolyás, mint a szénhidrátoknál
+# 5. Rost (2.85): Meglepően erős pozitív együttható
+# 
+# A nátriumnak (0.0061) gyakorlatilag nincs hatása a kalóriatartalomra, ami érthető,
+# mivel a só nem tartalmaz kalóriát. Néhány összetevő (cukor, vitaminok, kalcium) 
+# negatív együtthatóval rendelkezik, ami vagy a modelltől, vagy az ételek 
+# összetételének sajátosságaiból adódhat.

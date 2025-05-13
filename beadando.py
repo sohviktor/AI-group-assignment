@@ -137,6 +137,5 @@ df['protein_per_calorie'] = df['protein'] / df['calories']
 # Átlagos fehérje-kalória arány éttermenként
 protein_efficiency = df.groupby('restaurant')['protein_per_calorie'].mean()
 
-
 # Rendezzük csökkenő sorrendbe
 protein_efficiency_sorted = protein_efficiency.sort_values(ascending=False)

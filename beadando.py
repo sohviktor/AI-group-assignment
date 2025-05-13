@@ -41,3 +41,22 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, roc_auc_score
 from sklearn.model_selection import StratifiedShuffleSplit
 
+
+# Adatfeldolgozás
+# Adatok beolvasása
+df = pd.read_csv('fastfood_calories.csv')
+# Adatok megtekintése
+print(df.head())
+# Adatok típusainak ellenőrzése
+print(df.dtypes)
+# Adatok hiányosságainak ellenőrzése
+print(df.isnull().sum())
+# Adatok tisztítása
+df = df.dropna()  # Hiányzó értékek eltávolítása
+
+
+# 1. Hányféle étteremlánc adatai találhatóak meg az adathalmazban?
+print("1__________________________________")
+# Az étteremláncok neveinek egyedi értékeinek száma
+unique_chains = df['restaurant'].nunique()
+print(f'Hányféle étteremlánc adatai találhatóak meg az adathalmazban? {unique_chains}')

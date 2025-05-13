@@ -177,3 +177,7 @@ predictors = ['total_fat', 'sat_fat', 'trans_fat', 'cholesterol', 'sodium',
               'total_carb', 'fiber', 'sugar', 'protein', 'vit_a', 'vit_c', 'calcium']
 X = df[predictors]
 y = df['calories']
+
+# Lineáris regressziós modellt hozunk létre és illesztjük a tanító adatokra
+model = LinearRegression()
+model.fit(X_train, y_train)

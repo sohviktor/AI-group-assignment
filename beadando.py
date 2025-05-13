@@ -130,3 +130,8 @@ plt.close()
 
 # 4. Melyik éttermet válasszuk, ha maximalizálni szeretnénk a fehérje bevitelt, a lehető legkevesebb kalória mellett?
 print("4__________________________________")
+
+# Fehérje-kalória arány kiszámítása minden termékre
+# Magasabb érték = több fehérje kevesebb kalóriával
+df['protein_per_calories'] = df['protein'] / df['calories']
+

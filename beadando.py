@@ -181,3 +181,6 @@ y = df['calories']
 # Lineáris regressziós modellt hozunk létre és illesztjük a tanító adatokra
 model = LinearRegression()
 model.fit(X_train, y_train)
+
+# Előrejelzés a teszt adatokon
+y_pred = model.predict(X_test)

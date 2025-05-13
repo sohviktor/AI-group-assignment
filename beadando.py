@@ -159,3 +159,10 @@ plt.legend(['Átlagos fehérje-kalória arány'])
 plt.tight_layout()
 plt.savefig('feherje_kaloria_arany.png')
 plt.close()
+
+#--- Érdekelt minket úgyhogy: részletesebb vizsgálat: a legmagasabb fehérje-kalória arányú termékek az adatbázisban
+top_items = df.sort_values('protein_per_calorie', ascending=False).head(10)
+print("\nLegjobb fehérje-kalória arányú termékek:")
+for idx, row in top_items.iterrows():
+    print(f"{row['restaurant']} - {row['item']}: {row['protein_per_calorie']:.4f} (Fehérje: {row['protein']}g, Kalória: {row['calories']})")
+#---

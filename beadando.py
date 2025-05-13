@@ -1,0 +1,43 @@
+'''
+A mellékelt adathalmaz a különböző gyorséttermekben kapható ételek kalória- és egyéb adatait tartalmazza.
+
+Felelősségek lebontása:
+
+Adatfeldolgozás
+Modellezés
+Prototipizálás / teszelés
+Főbb megválaszolandó kérdések:
+
+Hányféle étteremlánc adatai találhatóak meg az adathalmazban?
+Éttermenként átlagosan hány termék található az adathalmazban? Mi ennek a mediánja, szórása, mik a szélsőértékei? (milyen tartományban mozog...)
+Melyik étteremben használják a legtöbb sót, legtöbb cukrot?
+Melyik éttermet válasszuk, ha maximalizálni szeretnénk a fehérje bevitelt, a lehető legkevesebb kalória mellett?
+Előrejelezhető a különböző adatok (zsír, cukor, só, rostok, fehérje, szénhidrátok...) segítségével a kalóriatartalom?
+'''
+
+# 1. Alap importok
+import numpy as np
+import pandas as pd
+
+# 2. Felügyelt tanulás k-legküzelebbi szomszéd
+from sklearn.preprocessing import LabelBinarizer
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.neighbors import KNeighborsClassifier
+
+# 3. Train Test Splits, Cross Validation és Lineáris Regresszion
+from sklearn.preprocessing import OneHotEncoder, LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, MaxAbsScaler
+
+# 4. Kluszterezési módszerek
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.cluster import KMeans
+from sklearn.cluster import DBSCAN
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, roc_auc_score
+from sklearn.model_selection import StratifiedShuffleSplit
+

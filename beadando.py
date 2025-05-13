@@ -72,3 +72,6 @@ mean_products = products_per_restaurant.mean()
 median_products = products_per_restaurant.median()
 # Szórás a termékszámokban
 std_products = products_per_restaurant.std()
+# Minimum és maximum termékszám
+min_products = products_per_restaurant.min()
+max_products = products_per_restaurant.max()

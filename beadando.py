@@ -65,3 +65,8 @@ print(f'Hányféle étteremlánc adatai találhatóak meg az adathalmazban? {uni
 print("2__________________________________")
 # Számoljuk meg éttermenként a termékek számát
 products_per_restaurant = df.groupby('restaurant').size()
+
+# Átlag termékszám éttermenként
+mean_products = products_per_restaurant.mean()
+# Medián termékszám éttermenként
+median_products = products_per_restaurant.median()

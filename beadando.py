@@ -205,3 +205,14 @@ importance = importance.sort_values('Abszolút_együttható', ascending=False)
 print("\nPrediktorok fontossága (együtthatók abszolút értéke szerint rendezve):")
 for index, row in importance.iterrows():
     print(f"{row['Prediktor']}: {row['Együttható']:.4f}")
+
+# Ábrázoljuk a tényleges vs. előrejelzett értékeket
+plt.figure(figsize=(10, 6))
+plt.scatter(y_test, y_pred, alpha=0.5)
+plt.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', lw=2)
+plt.xlabel('Tényleges kalória')
+plt.ylabel('Előrejelzett kalória')
+plt.title('Tényleges vs. Előrejelzett kalóriaértékek')
+plt.tight_layout()
+plt.savefig('kaloria_elorejelzes.png')
+plt.close()

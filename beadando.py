@@ -77,3 +77,11 @@ min_products = products_per_restaurant.min()
 max_products = products_per_restaurant.max()
 # Tartomány (range)
 range_products = max_products - min_products
+
+print("\nÉttermenként található termékek statisztikái:")
+print(f"Átlagos termékszám: {mean_products:.2f}")
+print(f"Medián termékszám: {median_products:.0f}")
+print(f"Termékszám szórása: {std_products:.2f}")
+print(f"Minimum termékszám: {min_products} ({products_per_restaurant.idxmin()})")
+print(f"Maximum termékszám: {max_products} ({products_per_restaurant.idxmax()})")
+print(f"Termékszám tartománya: {range_products}")

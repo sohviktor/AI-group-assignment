@@ -105,3 +105,6 @@ for restaurant, count in products_per_restaurant.sort_values(ascending=False).it
 
 # 3. Melyik étteremben használják a legtöbb sót, legtöbb cukrot?
 print("3__________________________________")
+# A só és cukor mennyiségének összegzése étteremlánc szerint
+sodium_per_restaurant = df.groupby('restaurant')['sodium'].sum()
+sugar_per_restaurant = df.groupby('restaurant')['sugar'].sum()

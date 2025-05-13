@@ -70,3 +70,5 @@ products_per_restaurant = df.groupby('restaurant').size()
 mean_products = products_per_restaurant.mean()
 # Medián termékszám éttermenként
 median_products = products_per_restaurant.median()
+# Szórás a termékszámokban
+std_products = products_per_restaurant.std()

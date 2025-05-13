@@ -193,3 +193,15 @@ r2 = model.score(X_test, y_test)
 print("\nLineáris regressziós modell teljesítménye:")
 print(f"RMSE (Root Mean Squared Error): {rmse:.2f} kalória")
 print(f"R² (Determinációs együttható): {r2:.4f}")
+
+# Vizsgáljuk meg a prediktorok fontosságát (együtthatók)
+importance = pd.DataFrame({
+    'Prediktor': predictors,
+    'Együttható': model.coef_
+})
+importance['Abszolút_együttható'] = np.abs(importance['Együttható'])
+importance = importance.sort_values('Abszolút_együttható', ascending=False)
+
+print("\nPrediktorok fontossága (együtthatók abszolút értéke szerint rendezve):")
+for index, row in importance.iterrows():
+    print(f"{row['Prediktor']}: {row['Együttható']:.4f}")

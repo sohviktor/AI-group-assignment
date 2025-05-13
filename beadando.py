@@ -127,3 +127,6 @@ plt.legend()
 plt.tight_layout()
 plt.savefig('só_cukor_mennyiseg.png')
 plt.close()
+
+# 4. Melyik éttermet válasszuk, ha maximalizálni szeretnénk a fehérje bevitelt, a lehető legkevesebb kalória mellett?
+print("4__________________________________")

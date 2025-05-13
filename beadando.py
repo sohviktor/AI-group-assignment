@@ -143,3 +143,7 @@ print("\nÉttermek fehérje-kalória aránya (fehérje/kalória):")
 for restaurant, ratio in protein_efficiency_sorted.items():
     print(f"{restaurant}: {ratio:.4f}")
 
+# Legjobb étterem kiválasztása
+best_restaurant = protein_efficiency_sorted.index[0]
+best_ratio = protein_efficiency_sorted.iloc[0]
+print(f"\nLegjobb fehérje-kalória arányú étterem: {best_restaurant} ({best_ratio:.4f})")

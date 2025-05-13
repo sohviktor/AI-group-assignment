@@ -216,3 +216,13 @@ plt.title('Tényleges vs. Előrejelzett kalóriaértékek')
 plt.tight_layout()
 plt.savefig('kaloria_elorejelzes.png')
 plt.close()
+
+# Ábrázoljuk a prediktorok fontosságát
+plt.figure(figsize=(12, 6))
+importance.plot(kind='bar', x='Prediktor', y='Abszolút_együttható', color='teal')
+plt.title('Prediktorok fontossága a kalóriatartalom előrejelzésében')
+plt.xlabel('Tápanyagok')
+plt.ylabel('Együtthatók abszolút értéke')
+plt.tight_layout()
+plt.savefig('prediktor_fontossag.png')
+plt.close()

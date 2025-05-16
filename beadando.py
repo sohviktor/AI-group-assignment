@@ -178,6 +178,9 @@ predictors = ['total_fat', 'sat_fat', 'trans_fat', 'cholesterol', 'sodium',
 X = df[predictors]
 y = df['calories']
 
+# Felosztjuk az adatokat tanuló és teszt halmazokra
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+
 # Lineáris regressziós modellt hozunk létre és illesztjük a tanító adatokra
 model = LinearRegression()
 model.fit(X_train, y_train)

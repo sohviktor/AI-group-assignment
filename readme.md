@@ -1,7 +1,9 @@
-Hallgató név - commit account név \n\n
+# AI Group Assignment
 
-Sohajda Viktor - bimbilimb\n
-Molnár Milán - mmilan-d\n
-Rigó Zsolt - rigozsolt
+## Team Members
 
-
+| Student Name | GitHub Commit Account |
+|-------------|---------------|
+| Sohajda Viktor | bimbilimb |
+| Molnár Milán | mmilan-d |
+| Rigó Zsolt | rigozsolt |

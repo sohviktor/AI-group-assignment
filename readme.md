@@ -1,7 +1,7 @@
-Hallgató név - commit account név
+Hallgató név - commit account név \n\n
 
-Sohajda Viktor - bimbilimb
-Molnár Milán - mmilan-d
+Sohajda Viktor - bimbilimb\n
+Molnár Milán - mmilan-d\n
 Rigó Zsolt - rigozsolt
 
 
